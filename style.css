@@ -1,0 +1,81 @@
+body {
+    background-color: thistle;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "New Amsterdam", sans-serif;
+}
+
+header {
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 100px;
+    font-size: 60px;
+    border-bottom: 5px solid;
+    /* background-color: brown; */
+    /* color: white; */
+    letter-spacing: 10px;
+    /* text-decoration: underline; */
+}
+
+#restart-btn {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    background-color: palevioletred;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: "New Amsterdam", sans-serif;
+}
+#restart-btn:hover{
+    background-color: mediumorchid;
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: 20px;
+    background-color: rgb(246, 180, 202);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    background-size: cover;
+}
+.card:hover{
+    background-color: rgb(229, 162, 246);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.card.flipped img {
+    opacity: 1;
+}
+
+.card:not(.flipped) img {
+    opacity: 0;
+}
+
+.card.matched {
+    cursor: default;
+    border: 2px solid brown;
+}
